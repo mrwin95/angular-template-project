@@ -1,0 +1,93 @@
+<div class="md:flex p-10">
+  <div class="p-2">
+    <ul class="max-w-md divide-y divide-gray-200 dark:divide-gray-700">
+      <li class="pb-3 sm:pb-4" *ngFor="let item of roleLists; let srno = index">
+        <div class="flex items-center space-x-4 rtl:space-x-reverse">
+          <div class="flex-shrink-0">
+            <img
+              class="w-8 h-8 rounded-full"
+              src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=448&q=80"
+              alt="{{ item.role }}"
+            />
+          </div>
+          <div class="flex-1 min-w-0">
+            <p
+              class="text-sm font-medium text-gray-900 truncate dark:text-blue-400"
+            >
+              {{ item.role }}
+            </p>
+            <p class="text-sm text-gray-500 truncate dark:text-gray-400"></p>
+          </div>
+          <div
+            class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-balance"
+          >
+            $320
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <!-- <div class="md:flex-shrink-0">
+    <img
+      class="rounded-lg md:w-56"
+      src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=448&q=80"
+      width="448"
+      height="299"
+      alt="Woman paying for a purchase"
+    />
+  </div>
+  <div class="mt-4 md:mt-0 md:ml-6">
+    <div class="uppercase font-bold text-indigo-300 text-sm">Marketing</div>
+    <a href="#" class="hover:underline text-gray-900 mt-1"
+      >Find customers for your new business</a
+    >
+    <p class="text-gray-600 mt-2">
+      Getting a new business off the ground is a lot of hard work. Here are five
+      ideas you can use to find your first customers.
+    </p>
+  </div>
+</div>
+
+<div class="w-full p-10 max-w-xs">
+  <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+    <div class="md-4">
+      <label class="block text-gray-300 text-sm font-bold mb-2">Username</label>
+      <input
+        type="text"
+        class="border rounded w-full py-2 px-3 text-gray-700 shadow appearance-none leading-tight focus:shadow-outline"
+        placeholder="Username"
+        [value]="username"
+      />
+    </div>
+    <div class="md-4">
+      <label class="block text-gray-300 text-sm font-bold mb-2">Password</label>
+      <input
+        type="text"
+        class="border rounded w-full py-2 px-3 text-gray-700 shadow appearance-none leading-tight focus:shadow-outline"
+        placeholder="Username"
+        [(ngModel)]="username"
+        [ngModelOptions]="{ standalone: true }"
+      />
+    </div>
+    <div class="md-4">
+      <label class="block text-gray-300 text-sm font-bold mb-2">Role</label>
+      <select
+        [(ngModel)]="selectedRole"
+        [ngModelOptions]="{ standalone: true }"
+        class="bg-gray-50 border rounded border-gray-300 text-gray-900 text-sm focus:ring-blue-500 block w-full py-2 px-3"
+      >
+        <option>Admin</option>
+        <option>Editor</option>
+        <option>Viewer</option>
+      </select>
+    </div>
+    <div class="md-4 mt-6">
+      <button
+        (click)="showWelcomeMessage()"
+        class="text-white bg-blue-700 hover:bg-black font-medium px-5 py-2.5 mb-2 w-full rounded"
+      >
+        Show message
+      </button>
+    </div>
+  </form> -->
+</div>

@@ -1,0 +1,59 @@
+<!-- <div class="flex mt-2 justify-center"> -->
+<div
+  class="flex mt-1 justify-center text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700"
+>
+  <ul class="flex flex-wrap -mb-px">
+    <li class="me-2">
+      <a
+        href="#"
+        (click)="changeTab('Roles')"
+        class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+        [ngClass]="
+          currentComponent == 'Roles'
+            ? 'border-b-2 text-blue-600 border-blue-600 active'
+            : ''
+        "
+        >Roles</a
+      >
+    </li>
+    <li class="me-2">
+      <a
+        href="#"
+        (click)="changeTab('Designation')"
+        class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+        aria-current="page"
+        [ngClass]="
+          currentComponent == 'Designation'
+            ? 'border-b-2 text-blue-600 border-blue-600 active'
+            : ''
+        "
+        >Designation</a
+      >
+    </li>
+  </ul>
+</div>
+
+<!-- <div class="inline-flex rounded-md shadow-sm">
+    <a
+      href="#"
+      (click)="changeTab('Roles')"
+      aria-current="page"
+      class="px-4 py-2 text-sm font-medium text-blue-700 bg-white border border-gray-200 rounded-s-lg hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white"
+    >
+      Roles
+    </a>
+    <a
+      href="#"
+      (click)="changeTab('Designation')"
+      class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 rounded-e-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white"
+    >
+      Designation
+    </a>
+  </div> -->
+<!-- </div> -->
+<div class="flex mt-2 justify-center" *ngIf="currentComponent == 'Roles'">
+  <app-roles></app-roles>
+</div>
+<div class="flex mt-2 justify-center" *ngIf="currentComponent == 'Designation'">
+  <app-designation></app-designation>
+</div>
